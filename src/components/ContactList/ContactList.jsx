@@ -2,7 +2,6 @@ import css from './ContactList.module.css';
 import PropTypes from 'prop-types';
 import ContactItem from 'components/ContactItem/ContactItem';
 
-
 function ContactList({ filterContacts, onDelete }) {
   return (
     <>

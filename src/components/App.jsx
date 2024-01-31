@@ -59,7 +59,7 @@ export class App extends Component {
   render() {
     return (
       <>
-        <div>
+        <div className="main-div">
           <h1>Phonebook</h1>
           <ContactForm
             onSubmit={this.addContacts}

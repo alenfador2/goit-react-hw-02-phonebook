@@ -15,7 +15,9 @@ class ContactForm extends Component {
 
   handleFormSubmit = ({ name, number }, { resetForm }) => {
     const { contacts } = this.props;
-    const numberAlreadyExist = contacts.some(contact => contact.name.includes(name));
+    const numberAlreadyExist = contacts.some(contact =>
+      contact.name.includes(name)
+    );
 
     if (numberAlreadyExist) {
       alert(`${name} is already exist!`);
@@ -28,7 +30,10 @@ class ContactForm extends Component {
 
   render() {
     return (
-      <Formik initialValues={this.initialValues} onSubmit={this.handleFormSubmit}>
+      <Formik
+        initialValues={this.initialValues}
+        onSubmit={this.handleFormSubmit}
+      >
         <Form>
           <div className={css.contact_container}>
             <label htmlFor={usernameInputId} className={css.username_label}>
@@ -41,6 +46,7 @@ class ContactForm extends Component {
               className={css.username_input}
               pattern="^[a-zA-Zа-яА-Я]+(([' \-][a-zA-Zа-яА-Я ])?[a-zA-Zа-яА-Я]*)*$"
               title="Name may contain only letters, apostrophe, dash and spaces. For example Adrian, Jacob Mercer, Charles de Batz de Castelmore d'Artagnan"
+              placeholder="Please write username"
               required
             />
             <label htmlFor={usertelInputId} className={css.usertel_label}>
@@ -53,6 +59,7 @@ class ContactForm extends Component {
               className={css.usertel_input}
               // pattern="\+?\d{1,4}?[-.\s]?\(?\d{1,3}?\)?[-.\s]?\d{1,4}[-.\s]?\d{1,4}[-.\s]?\d{1,9}"
               title="Phone number must be digits and can contain spaces, dashes, parentheses and can start with +"
+              placeholder="Please write number"
               required
             />
             <button type="submit" className={css.add_button}>

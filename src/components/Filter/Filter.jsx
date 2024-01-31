@@ -4,10 +4,12 @@ import { nanoid } from 'nanoid';
 
 const findNameInputId = nanoid();
 
-function Filter({filter, onFilter}) {
+function Filter({ filter, onFilter }) {
   return (
     <>
-      <label htmlFor={findNameInputId} className={css.filter_label}>Find contacts by name</label>
+      <label htmlFor={findNameInputId} className={css.filter_label}>
+        Find contacts by name
+      </label>
       <input
         type="text"
         id={findNameInputId}
@@ -20,8 +22,8 @@ function Filter({filter, onFilter}) {
 }
 
 Filter.propTypes = {
-    filter: PropTypes.string.isRequired,
-    onFilter: PropTypes.func.isRequired,
-}
+  filter: PropTypes.string.isRequired,
+  onFilter: PropTypes.func.isRequired,
+};
 
 export default Filter;
