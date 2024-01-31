@@ -4,8 +4,8 @@ import PropTypes from 'prop-types';
 const ContactItem = ({ id, name, number, onDelete }) => {
   return (
     <>
-      <span>{name}</span>:<span>{number}</span>
-      <button type='button' onClick={()=>onDelete(id)}>Delete</button>
+      <span className={css.item_span}>{name}</span>:<span>{number}</span>
+      <button className={css.item_button} type='button' onClick={()=>onDelete(id)}>Delete</button>
     </>
   );
 };

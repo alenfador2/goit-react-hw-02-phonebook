@@ -7,12 +7,13 @@ const findNameInputId = nanoid();
 function Filter({filter, onFilter}) {
   return (
     <>
-      <label htmlFor={findNameInputId}>Find contacts by name</label>
+      <label htmlFor={findNameInputId} className={css.filter_label}>Find contacts by name</label>
       <input
         type="text"
         id={findNameInputId}
         onChange={onFilter}
         value={filter}
+        className={css.filter_input}
       />
     </>
   );

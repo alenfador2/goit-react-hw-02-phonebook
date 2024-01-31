@@ -6,7 +6,7 @@ import ContactItem from 'components/ContactItem/ContactItem';
 function ContactList({ filterContacts, onDelete }) {
   return (
     <>
-      <ul>
+      <ul className={css.contact_list}>
         {filterContacts().map(({ id, number, name }) => (
           <ContactItem
             id={id}
@@ -14,6 +14,7 @@ function ContactList({ filterContacts, onDelete }) {
             number={number}
             name={name}
             onDelete={onDelete}
+            className={css.contact_item}
           />
         ))}
       </ul>
